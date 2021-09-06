@@ -11,3 +11,11 @@ list.forEach((link) => {
     moveIndicator(e.target);
   });
 });
+
+// Add active class in hovered list item
+function activeLink() {
+  list.forEach((item) => item.classList.remove('active'));
+  this.classList.add('active');
+}
+
+list.forEach((item) => item.addEventListener('mouseover', activeLink));
